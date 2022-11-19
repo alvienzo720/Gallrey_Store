@@ -46,10 +46,32 @@ def registerUser(request):
     return render(request, 'photolibrary/register.html', context)
 
 
-
 @login_required(login_url='login')
 def home(request):
     photos = OurPhoto.objects.all()
     context = {'photos':photos}
     return render(request, 'photolibrary/home.html', context)
+
+
+def expandImage(request, pk):
+    photo = OurPhoto.objects.get(id=pk)
+    context = {'photo':photo}
+    return render(request, 'photolibrary/expandimage.html', context)
+
+
+def createPhoto(request):
+    if request.method == 'POST':
+        data = request.POST
+        image = request.FILES.get('image')
+
+        if data != 'none':
+            photo = OurPhoto.objects.create(
+                title=data['title'],
+                description=data['description'],
+                image=image
+            )
+        return redirect('home')
+    return render(request, 'photolibrary/createPhoto.html')
+
+
 
