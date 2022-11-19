@@ -2,6 +2,10 @@
 .idea
 .coverage*
 .DS_Store
+staticfiles
+mediafiles
+
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
