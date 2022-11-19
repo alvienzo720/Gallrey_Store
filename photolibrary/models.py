@@ -34,3 +34,12 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     def get_short_name(self):
         return self.username
+
+
+class OurPhoto(models.Model):
+    image = models.ImageField(null=False, blank=False)
+    title = models.CharField(max_length=200, null=False, blank=False)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.title
