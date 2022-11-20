@@ -25,16 +25,16 @@ class TestModels(TestCase):
 
 	def test_image_to_upload(self):
 		self.photo1 = OurPhoto.objects.create(
-			image='static/images/1470787.jpg',
+			image='static/images/1865378.jpg',
 			title='Robots',
 			description='hellothere'
 			)
-		self.assertEquals(self.photo1.image, 'static/images/1470787.jpg')
+		self.assertEquals(self.photo1.image, 'static/images/1865378.jpg')
 
 
 	def test_title(self):
 		self.photo1 = OurPhoto.objects.create(
-			image='static/images/1470787.jpg',
+			image='static/images/1865378.jpg',
 			title='Robots',
 			description='hellothere'
 			)
@@ -42,7 +42,7 @@ class TestModels(TestCase):
 
 	def test_description(self):
 		self.photo1 = OurPhoto.objects.create(
-			image='static/images/1470787.jpg',
+			image='static/images/1865378.jpg',
 			title='Robots',
 			description='hellothere'
 			)
