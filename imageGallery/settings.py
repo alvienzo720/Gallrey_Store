@@ -28,7 +28,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'photolibrary',
-    'whitenoise.runserver_nostatic'
+    'whitenoise.runserver_nostatic',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -126,12 +127,14 @@ STATICFILES_STORAGE="whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'photolibrary.User'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
-#SMTP
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.mailgun.org'
-EMAIL_PORT = 465
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'brad@sandbox12e8ae31abe74a69964cee38ce817a62.mailgun.org'
-EMAIL_HOST_PASSWORD = ''
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# SMTP
+# EMAIL_HOST = 'mail.smtp2go.com'
+# EMAIL_PORT = 2525
+# EMAIL_USE_TLS = True
+# EMAIL_HOST_USER = 'web3forafrica.com'
+# EMAIL_HOST_PASSWORD = 'yvQCwfNd7h5Q7FLB'
