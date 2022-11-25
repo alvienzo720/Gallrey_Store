@@ -5,9 +5,6 @@ import json
 
 
 class TestViews(TestCase):
-	def setUp(self):
-		self.client = Client()
-		self.user = User.objects.create_user('mutebialvinalvienzo@gmail.com','alvinmutebi','Alvin','Mutebi','hellowprds')
 	
 	def test_login_view(self):
 		self.client.login(email='mutebialvinalvienzo@gmail.com', password='hellowprds')

@@ -39,7 +39,7 @@
     <div class=" container">
                 {% if request.user.is_authenticated %}
                 <div class="alert alert-success" role="alert">
-                    <p>Hello {{request.user}} Welcome Back</p>
+                    <p>Hello {{request.user.first_name}} {{request.user.last_name}} Welcome Back</p>
                 </div>
                 {% endif %}
 

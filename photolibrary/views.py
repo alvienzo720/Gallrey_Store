@@ -74,4 +74,3 @@ def createPhoto(request):
     return render(request, 'photolibrary/createPhoto.html')
 
 
-
