@@ -2,6 +2,7 @@
 from pathlib import Path
 import os
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -133,8 +134,10 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # SMTP
-# EMAIL_HOST = 'mail.smtp2go.com'
-# EMAIL_PORT = 2525
+
+# EMAIL_HOST = 'smtp.mailgun.org'
+# EMAIL_PORT = 587
 # EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = 'web3forafrica.com'
-# EMAIL_HOST_PASSWORD = 'yvQCwfNd7h5Q7FLB'
+# EMAIL_HOST_USER = 'brad@sandbox12e8ae31abe74a69964cee38ce817a62.mailgun.org'
+# EMAIL_HOST_PASSWORD = 'f74681bfe44e35aa7113d8d58ec75171-69210cfc-f02a6eaf'
+# DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
